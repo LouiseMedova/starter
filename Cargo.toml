@@ -1,5 +1,5 @@
 [package]
-name = "starter"
+name = "nft"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,9 +7,16 @@ edition = "2021"
 gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], branch = "testnet"}
 scale-info = { version = "2", default-features = false, features = ["derive"] }
 parity-scale-codec = { version = "3", default-features = false }
+gear-lib = { git = "https://github.com/gear-dapps/gear-lib.git", tag = "0.3.5" }
+gear-lib-derive = { git = "https://github.com/gear-dapps/gear-lib.git", tag = "0.3.5" }
+nft-io = { path = "io" }
 
 [build-dependencies]
 gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "testnet" }
+nft-io = { path = "io" }
 
 [dev-dependencies]
 gtest = { git = "https://github.com/gear-tech/gear.git", branch = "testnet"}
+
+[workspace]
+members = ["state"]
